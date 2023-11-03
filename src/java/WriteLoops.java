@@ -18,7 +18,7 @@ public class WriteLoops {
         // Write a FOR loop that counts from 1 to 10.
             // calling
             for(int i = 0; i < 5; i++){
-                w+=1;
+                w++;
             }
             // each time through the loop
 
@@ -32,7 +32,7 @@ public class WriteLoops {
         // Write a FOR loop that counts from 1 to 10.
         // calling
         for(int i = 0; i < 10; i++){
-            w+=1;
+            w++;
         }
         // each time through the loop
         
@@ -45,7 +45,7 @@ public class WriteLoops {
         // Write a FOR loop that makes 10 iterations, start at 21.
         // calling
         for(int i = 21; i < 32; i++){
-            w+=1;
+            w++;
         }
         // each time through the loop
         
@@ -58,7 +58,7 @@ public class WriteLoops {
         // Write a FOR loop that counts down from 100 to 0.
         // calling
         for(int i = 100; i > 0; i--){
-            w+=1;
+            w++;
         }
         // each time through the loop
         
@@ -71,7 +71,7 @@ public class WriteLoops {
         // Write a FOR loop from 0 to 32 by 2s.
         // calling
         for(int i = 0; i <= 32; i+=2){
-            w+=1;
+            w++;
         }
         // each time through the loop
         return w;
@@ -83,7 +83,7 @@ public class WriteLoops {
         // Write a FOR loop from 1 to less than 5001 by 11s.
         // calling
         for(int i = 1; i < 5001; i+=11){
-            w+=1;
+            w++;
         }
         // each time through the loop
         
@@ -98,7 +98,7 @@ public class WriteLoops {
                 // calling
                 for(int i = 0; i < 20; i ++){
                     for (int j = 0; j <= 4; j++){
-                        w+=1;
+                        w++;
                     }
                 }
                 // each time through the inner loop
@@ -108,14 +108,21 @@ public class WriteLoops {
 
     public int helloZipCode() {
         int w = 0;
-
+        int counter = 0;
         // Write a FOR loop that counts from 5 to 105. Put an IF
         // statement inside the loop that checks the
         // loop index counter and if it’s greater than 51,
         // prints “Hello Zipcode” instead of the statement w = w + 1;
 
                 // calling
-                w = w + 1;
+                for (int i = 5; i <= 105; i++){
+                    counter++;
+                    if(counter <= 51){
+                        w++;
+                    }else {
+                        System.out.println("Hello Zipcode");
+                    }
+                }
             // each time through the inner loop
         
         return w;
@@ -148,7 +155,11 @@ public class WriteLoops {
         // you need to use a .equals for two Strings.
 
             // calling
-            w = w + 1;
+            while(this.gps <= 5){
+                driveSomeMore();
+                w++;
+            }
+            System.out.println("Honey, I'm Home!");
             // each time through the inner loop
         
 
