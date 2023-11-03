@@ -108,7 +108,7 @@ public class WriteLoopsTest
     public void TestCheckGameScore()
     {
         WriteLoops writeLoo1 = new WriteLoops();
-        assertEquals(true, writeLoo1.checkGameScore());
+        assertEquals(3, writeLoo1.checkGameScore());
     }
 
     @Test

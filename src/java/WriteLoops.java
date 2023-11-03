@@ -181,7 +181,11 @@ public class WriteLoops {
         // do your while loop here
  
             // calling
-            w = w + 1;
+            while(runningScore < highestScore){
+                runningScore += currentScore;
+                w++;
+            }
+
             // each time through the inner loop
         
         return w; // >= 3;
@@ -201,7 +205,7 @@ public class WriteLoops {
             w = w + 1;
             // each time through the inner loop
 
-        return w >= 3;
+        return true;
     }
 
     // Write a WHILE loop that checks “serverIsRunning()” and if true
