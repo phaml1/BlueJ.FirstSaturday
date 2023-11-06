@@ -202,10 +202,13 @@ public class WriteLoops {
         // do your while loop here
 
             // calling
-            w = w + 1;
+        do{
+            runningScore += currentScore;
+            w++;
+        } while( runningScore < highestScore);
             // each time through the inner loop
 
-        return true;
+        return false;
     }
 
     // Write a WHILE loop that checks “serverIsRunning()” and if true
@@ -218,7 +221,14 @@ public class WriteLoops {
         
 
         // calling
-        w = w + 1;
+        while(serverIsRunning()){
+            waitFor(5);
+            w++;
+        }
+        if(!serverIsRunning()){
+            sendEmergencyText("Help!", adminPhoneNumber);
+            tryServerRestart("", adminPhoneNumber);
+        }
         // each time through the inner loop
         
         return w;
